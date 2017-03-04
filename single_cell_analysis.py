@@ -41,7 +41,7 @@ for cell in good_cells:
     plt.legend()
     plt.show(block = False)
     end_G1 = input("What frame does Fucci-D begin to rise? ")
-    if end_G1 != 0:
+    if end_G1 != 0 and len(aad[cell] >3):
         birth_sizes.append(aad[cell][4,3])
             #Uses the size at timepoint 4, after effects of mitosis have ended
         G1_lengths.append(end_G1 - aad[cell][0,0])
